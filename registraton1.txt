@@ -1,0 +1,91 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body>
+<script type="text/javascript">  
+function validate(){  
+var name=document.f1.name.value;  
+var passwordlength=document.f1.password.value.length; 
+var email=document.f1.email.value;
+var contact=document.f1.contact.value;
+var city=document.f1.city.value; 
+var status=false;  
+if(name==""){  
+document.getElementById("namelocation").innerHTML=  
+" <img src='w.jpg' height=25 width=25/> Please enter your name";  
+status=false;
+}else{  
+document.getElementById("namelocation").innerHTML=" <img src='r.jpg' height=25 width=25/>";  
+status=true;
+}  
+  
+
+
+if(passwordlength<6){  
+document.getElementById("passwordlocation").innerHTML=  
+" <img src='w.jpg' height=25 width=25/> Password must be greater than 6";  
+status=false; 
+}else{  
+document.getElementById("passwordlocation").innerHTML=" <img src='r.jpg' height=25 width=25/>";  
+} 
+
+
+if(email==""){  
+document.getElementById("emaillocation").innerHTML=  
+" <img src='w.jpg' height=25 width=25/> Please enter your email";  
+status=false;
+}else{  
+document.getElementById("emaillocation").innerHTML=" <img src='r.jpg' height=25 width=25/>";  
+status=true;
+}  
+
+
+
+if(contact==""){  
+document.getElementById("contactlocation").innerHTML=  
+" <img src='w.jpg' height=25 width=25/> Please enter your contact";  
+status=false;
+}else{  
+document.getElementById("contactlocation").innerHTML=" <img src='r.jpg' height=25 width=25/>";  
+status=true;
+}  
+
+
+
+if(city==""){  
+document.getElementById("citylocation").innerHTML=  
+" <img src='w.jpg' height=25 width=25/> Please enter your name";  
+status=false;
+}else{  
+document.getElementById("citylocation").innerHTML=" <img src='r.jpg' height=25 width=25/>";  
+status=true;
+} 
+return status;
+} 
+
+
+
+</script>  
+<form name="f1" action="welcome.html" onsubmit="return validate()">  
+<table>
+<tr><td>Name:</td><td><input type="text" name="name"/>  
+<span id="namelocation" style="color:red"></span></td></tr> 
+<tr><td>Password:</td><td><input type="password" name="password"/>  
+<span id="passwordlocation" style="color:red"></span></td></tr>
+
+
+<tr><td>Email:</td><td><input type="text" name="email"/>  
+<span id="emaillocation" style="color:red"></span></td></tr> 
+<tr><td>contact:</td><td><input type="text" name="contact"/>  
+<span id="contactlocation" style="color:red"></span></td></tr>
+
+<tr><td>city:</td><td><input type="text" name="city"/>  
+<span id="citylocation" style="color:red"></span></td></tr>
+
+<tr><td colspan="5"><input type="submit" value="register"/>  </td></tr>
+
+</table>
+</form>  
+</body>
+</html>
